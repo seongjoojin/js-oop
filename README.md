@@ -80,3 +80,22 @@ https://babeljs.io => 최신문법을 오래된 문법으로 변경하여 ie 등
 - `__proto__`쓰는 것 보다 `Object.create()`로 prototype link를 지정해주는 것이 더 좋은 방법
 
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/debugger
+
+## 객체와 함수
+
+- javascript에서 함수는 혼자 있으면 개인이고 new가 앞에 있으면 객체를 만드는 역할을 하고 call을 뒤에 붙이면 용병이고 bind를 붙이면 분신술을 부리는 존재
+- 많은 객제지향 언어에서 함수는 클래스에 종속된 것으로 보지만 자바스크립트에서는 신과 같은 존재
+
+- 모든 함수는 call이라고 하는 메소드를 가지고 있음
+- 자바스크립트에서는 함수도 객체
+
+- call의 첫번째인자는 함수의 내부 this를 뭘로 할지 결정해줌
+- 두 번째인자부터는 함수의 파라미터로 들어가게 됨
+- call은 this(컨텍스트)를 바꿈
+
+- bind : 함수의 내부 this를 고정시키는 것
+- bind의 첫번째인자는 함수의 내부 this를 뭘로 할지 결정해줌
+- bind 하더라도 원본 객체에는 영향을 끼치지 않음
+
+- call은 실행할때 함수의 컨택스트(this)의 값을 바꿈
+- bind는 어떤 함수의 내부적으로 this의 값을 영구적으로 바꾸는 새로운 함수를 만들어냄

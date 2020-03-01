@@ -32,3 +32,17 @@
 - javascript => prototype based language (프로토타입 기반 언어)
 - prototype 없다면 생성자 함수 안에 함수가 새로운 객체를 생성할 때마다 함수를 정의해야하므로 메모리가 낭비와 성능 저하를 일으킴
 - 자바스크립트는 객체의 속성으로 지정한 메소드를 먼저 실행시켜주고 없다면 prototype으로 지정된 메소드를 실행함
+
+## class
+
+- class : constructor function 대체제 (객체 공장)
+- es6에서 추가된 것
+
+https://caniuse.com
+
+https://babeljs.io => 최신문법을 오래된 문법으로 변경하여 ie 등의 브라우저에서도 동작할 수 있도록 도와줌
+
+생성자 함수 하는 일
+
+- 객체를 만든다
+- 객체의 초기 상태를 정의한다

@@ -46,3 +46,7 @@ https://babeljs.io => 최신문법을 오래된 문법으로 변경하여 ie 등
 
 - 객체를 만든다
 - 객체의 초기 상태를 정의한다
+
+## class constructor
+
+- constructor : 객체가 만들어지기 직전에 초기상태를 지정하는 역할을 하는 함수

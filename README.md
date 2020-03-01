@@ -158,3 +158,9 @@ lee 객체
 - name
 - first
 - second
+
+## 생성자를 통한 상속
+
+- javascript의 객체지향 핵심은 this
+- javascript에서 constructor는 여러가지 의미로 사용됨. 그 중 하나가 어떤 객체가 누구로부터 만들어졌는가를 알려주는 역할을 함
+- prototype,`__proto__`, Object.create 보다는 ES6의 Class기능을 사용하는 것이 나음

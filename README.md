@@ -62,3 +62,21 @@ https://babeljs.io => 최신문법을 오래된 문법으로 변경하여 ie 등
 - super: 서브(자식) 클래스에서 상위 클래스를 호출할 때 사용하는 키워드
 - super : 부모 클래스 ex) `super.sum()`
 - super() : 부모 클래스의 생성자
+
+## 객체 간의 상속
+
+객체지향은 크게 두 가지 요소로 나눠져 있음
+
+- class (객체 공장)
+- object (instance)
+
+- 주류 객체지향언어 => 자바와 비슷한 문법을 가진 언어들
+- 주류 객체지향 언어에서는 상속을 sub class가 super class의 자식이 되고 sub class를 통해서 object(객체)를 만듬
+- 객체가 어떠한 기능을 가지게 되는지는 class 단에서 결정됨
+
+- javascript에서는 sub object가 super object(prototype object)에서 직접 상속받을 수 있음
+- 상속은 자유롭게 prototype link(`__proto__`)를 바꿔주면 변경되게 됨
+- 프로퍼티로 없다면 `__proto__`이 담고 있는 객체에서 찾아서 나타내줌
+- `__proto__`쓰는 것 보다 `Object.create()`로 prototype link를 지정해주는 것이 더 좋은 방법
+
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/debugger

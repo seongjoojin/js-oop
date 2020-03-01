@@ -99,3 +99,62 @@ https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/debugg
 
 - call은 실행할때 함수의 컨택스트(this)의 값을 바꿈
 - bind는 어떤 함수의 내부적으로 this의 값을 영구적으로 바꾸는 새로운 함수를 만들어냄
+
+## `prototype` vs `__proto__`
+
+```js
+function Person() {}
+
+const Person = new Function();
+```
+
+- javascript에서 함수는 객체
+- 객체이기 때문에 property를 가질 수 있음
+
+```js
+function Person(name, first, second) {
+  this.name = name;
+  this.first = first;
+  this.second = second;
+}
+
+Person.prototype.sum = function() {};
+
+const kim = new Person('kim', 10, 20);
+
+const lee = new Person('lee', 10, 10);
+
+console.log(kim.name)
+
+kim.sum()
+```
+
+- Person, Person's prototype 객체가 생성됨
+- 이 두 개의 객체는 연관되어 있음
+- Person이라는 객체는 내부적으로 prototype이라는 property가 생성되고 이 property는 Person's prototype 객체를 가르킴 (Person.prototype이 Person's prototype을 가르킴)
+- Person's prototype는 constructor라는 property를 만들고 이 property는 Person을 가르킴
+- kim와 lee의 `__proto__`는 Person's prototype를 가르킴
+- kim 객체에는 없는 sum이라는 메소드 실행은 `kim.__proto__`가 가르키는 Person's prototype에 sum이라는 메소드를 실행함으로써 실행됨
+
+Person 객체
+
+- prototype
+
+Person's prototype 객체
+
+- constructor
+- sum
+
+kim 객체
+
+- `__proto__`
+- name
+- first
+- second
+
+lee 객체
+
+- `__proto__`
+- name
+- first
+- second

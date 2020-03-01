@@ -50,3 +50,9 @@ https://babeljs.io => 최신문법을 오래된 문법으로 변경하여 ie 등
 ## class constructor
 
 - constructor : 객체가 만들어지기 직전에 초기상태를 지정하는 역할을 하는 함수
+
+## class 상속
+
+- Inheritance
+- 기존 클래스의 기능을 상속하고 기능을 확장
+- 상속이 없으면 중복발생 및 유지보수하기 힘들어짐

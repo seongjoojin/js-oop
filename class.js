@@ -6,15 +6,16 @@ class Person {
   }
 
   sum() {
-    return `prototype : ${this.first + this.second}`;
+    return this.first + this.second;
   }
 }
 
-const kim = new Person('kim', 10, 20);
-kim.sum = function() {
-  return `this : ${this.first + this.second}`;
-};
-const lee = new Person('lee', 10, 10);
+class PersonPlus extends Person {
+  avg() {
+    return (this.first + this.second) / 2;
+  }
+}
 
+const kim = new PersonPlus('kim', 10, 20);
 console.log('kim.sum()', kim.sum());
-console.log('lee.sum()', lee.sum());
+console.log('kim.avg()', kim.avg());
